@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE6C07BD26491C0B0023A1BD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6C07BC26491C0B0023A1BD /* Item.swift */; };
 		BEB4FEFD2642DE180008EF30 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB4FEFC2642DE180008EF30 /* ResetPasswordViewController.swift */; };
 		BEB4FEFF2642E73B0008EF30 /* FeaturedProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB4FEFE2642E73B0008EF30 /* FeaturedProductsViewController.swift */; };
 		BEC8D9B926479296008D0342 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC8D9B826479296008D0342 /* HomeViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE6C07BC26491C0B0023A1BD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BEB4FEFC2642DE180008EF30 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		BEB4FEFE2642E73B0008EF30 /* FeaturedProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductsViewController.swift; sourceTree = "<group>"; };
 		BEC8D9B826479296008D0342 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				BEF9BB80264136D500CCC03C /* Assets.xcassets */,
 				BEF9BB82264136D500CCC03C /* LaunchScreen.storyboard */,
 				BEF9BB85264136D500CCC03C /* Info.plist */,
+				BE6C07BC26491C0B0023A1BD /* Item.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				BEB4FEFF2642E73B0008EF30 /* FeaturedProductsViewController.swift in Sources */,
 				BEF9BB78264136D300CCC03C /* AppDelegate.swift in Sources */,
 				BEF9BB9526413DBF00CCC03C /* PrivacyViewController.swift in Sources */,
+				BE6C07BD26491C0B0023A1BD /* Item.swift in Sources */,
 				BEF9BB7A264136D300CCC03C /* SceneDelegate.swift in Sources */,
 				BEF9BB97264140D100CCC03C /* LoginViewController.swift in Sources */,
 				BEF9BB99264141BB00CCC03C /* ForgotPasswordViewController.swift in Sources */,
