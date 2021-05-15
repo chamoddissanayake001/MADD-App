@@ -23,14 +23,8 @@ class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate
            collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
     
-//    func collectionView(_ collectionView: UICollectionViewCell, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath:IndexPath)->CGSize{
-//        let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
-//        let space: CGFloat = (flowLayout?.minimumInteritemSpacing ?? 0.0) + (flowLayout?.sectionInset.left ?? 0.0) + (flowLayout?.sectionInset.right ?? 0.0)
-//        let size:CGFloat = (collection.frame.size.width - space) / 2.0
-//        return CGSize(width: size, height: size)
-//    }
 
-   
+
 }
 
 extension FeaturedProductsViewController:UICollectionViewDataSource{
@@ -49,14 +43,15 @@ extension FeaturedProductsViewController:UICollectionViewDataSource{
 
 
 extension FeaturedProductsViewController: UICollectionViewDelegateFlowLayout{
+//    @IBOutlet var collection:UICollectionView!
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-//        @IBOutlet var collection:UICollectionView!
+
+
         let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
         let space: CGFloat = (flowLayout?.minimumInteritemSpacing ?? 0.0) + (flowLayout?.sectionInset.left ?? 0.0) + (flowLayout?.sectionInset.right ?? 0.0)
-        let size:CGFloat = (collection.frame.size.width - space) / 2.0
-        return CGSize(width: size, height: size)
-        
+        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
+        return CGSize(width: size, height: size*1.5)
+
 //        return CGSize(width: 170, height: 250)
     }
 }
