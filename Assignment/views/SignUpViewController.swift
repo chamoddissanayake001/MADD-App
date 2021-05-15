@@ -66,3 +66,9 @@ class SignUpViewController: UIViewController {
     */
 
 
+extension SignUpViewController{
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+}
+
