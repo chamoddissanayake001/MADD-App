@@ -2,29 +2,56 @@
 //  NewProductsViewController.swift
 //  Assignment
 //
-//  Created by user163815 on 5/11/21.
-//  Copyright © 2021 it18120844. All rights reserved.
-//
+
 
 import UIKit
 
-class NewProductsViewController: UIViewController {
+class NewProductsViewController: UIViewController,UICollectionViewDelegate {
 
+    @IBOutlet weak var newProductCollectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet var collection:UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        newProductCollectionView.dataSource = self
+        newProductCollectionView.delegate = self
+        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+  
 
 }
+
+
+extension NewProductsViewController:UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return newProducts.count
+    }
+    
+   
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewProductCollectionViewCell", for: indexPath) as! NewProductCollectionViewCell
+        cell.setup(with: newProducts[indexPath.row])
+        return cell
+    }
+}
+
+
+extension NewProductsViewController: UICollectionViewDelegateFlowLayout{
+//    @IBOutlet var collection:UICollectionView!
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+
+        let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
+        let space: CGFloat = (flowLayout?.minimumInteritemSpacing ?? 0.0) + (flowLayout?.sectionInset.left ?? 0.0) + (flowLayout?.sectionInset.right ?? 0.0)
+        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
+        return CGSize(width: size, height: size*1.5)
+
+//        return CGSize(width: 170, height: 250)
+    }
+}
+

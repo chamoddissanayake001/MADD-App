@@ -18,6 +18,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     func setup(with product: Product){
         productImageView.image = product.image
         titleLbl.text = product.title
+        priceLbl.text = product.price
         
     }
 }
