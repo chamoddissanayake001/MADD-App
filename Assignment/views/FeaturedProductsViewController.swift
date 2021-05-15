@@ -10,6 +10,8 @@ import UIKit
 
 class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate {
     
+     var screenTitle:String = ""
+    
 //    , UICollectionViewFlowLayout
 
     @IBOutlet weak var productCollectionView: UICollectionView!
@@ -17,10 +19,11 @@ class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate
     
     @IBOutlet var collection:UICollectionView!
     override func viewDidLoad() {
-           super.viewDidLoad()
-           productCollectionView.dataSource = self
-           productCollectionView.delegate = self
-           collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+       super.viewDidLoad()
+        self.title = screenTitle
+       productCollectionView.dataSource = self
+       productCollectionView.delegate = self
+       collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
     
 
