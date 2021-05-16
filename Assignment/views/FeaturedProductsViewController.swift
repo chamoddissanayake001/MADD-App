@@ -16,7 +16,7 @@ struct Product2: Decodable{
 
 
 
-class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate {
     
      var screenTitle:String = ""
     
@@ -34,9 +34,8 @@ class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate
         self.title = screenTitle
        productCollectionView.dataSource = self
        productCollectionView.delegate = self
-        
-//       collectionView.collectionViewLayout = UICollectionViewFlowLayout()
-        
+        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+
         let url = URL(string: "https://488f6031c726.ngrok.io/products/featured")
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error == nil{
@@ -52,46 +51,42 @@ class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate
         }.resume()
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return products.count
-    }
-    func collectionView(_ collectionView: UICollectionView,  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
-        cell.setup(with: products[indexPath.row])
-
-        return cell
-    }
-    
-
-
-}
-
-//extension FeaturedProductsViewController:UICollectionViewDataSource{
 //    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        return products.count
 //    }
-//
-//
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//    func collectionView(_ collectionView: UICollectionView,  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
 //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
-////        cell.setup(with: products[indexPath.row])
+//        cell.setup(with: products[indexPath.row])
+//
 //        return cell
 //    }
-//}
-//
-//
-//extension FeaturedProductsViewController: UICollectionViewDelegateFlowLayout{
-////    @IBOutlet var collection:UICollectionView!
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//
-//        let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
-//        let space: CGFloat = (flowLayout?.minimumInteritemSpacing ?? 0.0) + (flowLayout?.sectionInset.left ?? 0.0) + (flowLayout?.sectionInset.right ?? 0.0)
-//        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
-//        return CGSize(width: size, height: size*1.5)
-//
-////        return CGSize(width: 170, height: 250)
-//    }
-//}
+}
+
+extension FeaturedProductsViewController:UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return products.count
+    }
+    
+   
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
+        cell.setup(with: products[indexPath.row])
+        return cell
+    }
+}
+
+extension FeaturedProductsViewController: UICollectionViewDelegateFlowLayout{
+//    @IBOutlet var collection:UICollectionView!
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+
+        let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
+        let space: CGFloat = (flowLayout?.minimumInteritemSpacing ?? 0.0) + (flowLayout?.sectionInset.left ?? 0.0) + (flowLayout?.sectionInset.right ?? 0.0)
+        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
+        return CGSize(width: size, height: size*1.5)
+
+//        return CGSize(width: 170, height: 250)
+    }
+}
 
