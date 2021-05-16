@@ -8,7 +8,15 @@
 
 import UIKit
 
-class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate {
+struct Product2: Decodable{
+    let title: String
+    let price: String
+    let image: String
+}
+
+
+
+class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
      var screenTitle:String = ""
     
@@ -18,44 +26,72 @@ class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet var collection:UICollectionView!
+    
+    var products = [Product2]()
+    
     override func viewDidLoad() {
-       super.viewDidLoad()
+        super.viewDidLoad()
         self.title = screenTitle
        productCollectionView.dataSource = self
        productCollectionView.delegate = self
-       collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
+//       collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
+        let url = URL(string: "https://488f6031c726.ngrok.io/products/featured")
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error == nil{
+                do{
+                    self.products = try JSONDecoder().decode([Product2].self, from: data!)
+                }catch{
+                    print("Parse Error")
+                }
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }.resume()
     }
     
-
-
-}
-
-extension FeaturedProductsViewController:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return products.count
     }
-    
-   
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
         cell.setup(with: products[indexPath.row])
+
         return cell
     }
+    
+
+
 }
 
-
-extension FeaturedProductsViewController: UICollectionViewDelegateFlowLayout{
-//    @IBOutlet var collection:UICollectionView!
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-
-        let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
-        let space: CGFloat = (flowLayout?.minimumInteritemSpacing ?? 0.0) + (flowLayout?.sectionInset.left ?? 0.0) + (flowLayout?.sectionInset.right ?? 0.0)
-        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
-        return CGSize(width: size, height: size*1.5)
-
-//        return CGSize(width: 170, height: 250)
-    }
-}
+//extension FeaturedProductsViewController:UICollectionViewDataSource{
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return products.count
+//    }
+//
+//
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
+////        cell.setup(with: products[indexPath.row])
+//        return cell
+//    }
+//}
+//
+//
+//extension FeaturedProductsViewController: UICollectionViewDelegateFlowLayout{
+////    @IBOutlet var collection:UICollectionView!
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//
+//        let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
+//        let space: CGFloat = (flowLayout?.minimumInteritemSpacing ?? 0.0) + (flowLayout?.sectionInset.left ?? 0.0) + (flowLayout?.sectionInset.right ?? 0.0)
+//        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
+//        return CGSize(width: size, height: size*1.5)
+//
+////        return CGSize(width: 170, height: 250)
+//    }
+//}
 

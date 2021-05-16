@@ -16,7 +16,7 @@ struct NewProduct {
 let newProducts : [NewProduct] = [
     NewProduct(title: "Iphone X1", description: "New Iphone", price: "$1000", image: #imageLiteral(resourceName: "iphone11")),
     NewProduct(title: "Iphone X1", description: "New Iphone", price: "$1000", image: #imageLiteral(resourceName: "iphone11")),
-    NewProduct(title: "Iphone X1", description: "New Iphone", price: "$1000", image: #imageLiteral(resourceName: "iphone11")),
+//    NewProduct(title: "Iphone X1", description: "New Iphone", price: "$1000", image: #imageLiteral(resourceName: "iphone11")),
     NewProduct(title: "Iphone X1", description: "New Iphone", price: "$1000", image: #imageLiteral(resourceName: "iphone11")),
     NewProduct(title: "Iphone X1", description: "New Iphone", price: "$1000", image: #imageLiteral(resourceName: "iphone11")),
     NewProduct(title: "Iphone X1", description: "New Iphone", price: "$1000", image: #imageLiteral(resourceName: "iphone11")),

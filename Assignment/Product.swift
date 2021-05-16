@@ -13,6 +13,34 @@ struct Product {
     let description: String
     let price: String
     let image:UIImage
+    
+//    init?(json: [String: Any]) {
+//        guard let name = json["name"] as? String,
+//            let title = json["title"] as? String,
+//            let description = json["description"] as? String,
+//            let price = json["price"] as? String,
+//            let image = json["image"] as? String
+//        else {
+//            return nil
+//        }
+//
+//        var products: Set<Product> = []
+//        for string in productsJSON {
+//            guard let meal = Meal(rawValue: string) else {
+//                return nil
+//            }
+//
+//            meals.insert(meal)
+//        }
+//
+//        self.name = name
+//        self.coordinates = (latitude, longitude)
+//        self.meals = meals
+//    }
+//
+//
+    
+    
 }
 
 let products: [Product] = [
@@ -27,3 +55,10 @@ let products: [Product] = [
     Product(title: "Iphone X9", description: "New Iphone", price: "$9000", image: #imageLiteral(resourceName: "iphone11"))
     
 ]
+
+
+
+
+
+
+
