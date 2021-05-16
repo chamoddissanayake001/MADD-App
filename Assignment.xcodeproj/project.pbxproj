@@ -28,6 +28,7 @@
 		C8CB5F2F264FE35B001BBD6C /* NewProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB5F2E264FE35B001BBD6C /* NewProductCollectionViewCell.swift */; };
 		C8CB5F31264FE3F8001BBD6C /* NewProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB5F30264FE3F8001BBD6C /* NewProductsViewController.swift */; };
 		C8CB5F33264FE4F3001BBD6C /* NewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB5F32264FE4F3001BBD6C /* NewProduct.swift */; };
+		C8CB5F372650FD8F001BBD6C /* FeaturedHorizontialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB5F362650FD8F001BBD6C /* FeaturedHorizontialCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		C8CB5F2E264FE35B001BBD6C /* NewProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8CB5F30264FE3F8001BBD6C /* NewProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductsViewController.swift; sourceTree = "<group>"; };
 		C8CB5F32264FE4F3001BBD6C /* NewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProduct.swift; sourceTree = "<group>"; };
+		C8CB5F362650FD8F001BBD6C /* FeaturedHorizontialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedHorizontialCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				BEF9BB77264136D300CCC03C /* AppDelegate.swift */,
 				BEF9BB79264136D300CCC03C /* SceneDelegate.swift */,
 				BEF9BB7D264136D300CCC03C /* Main.storyboard */,
+				C8CB5F362650FD8F001BBD6C /* FeaturedHorizontialCollectionViewCell.swift */,
 				BEF9BB80264136D500CCC03C /* Assets.xcassets */,
 				BEF9BB82264136D500CCC03C /* LaunchScreen.storyboard */,
 				BEF9BB85264136D500CCC03C /* Info.plist */,
@@ -209,6 +212,7 @@
 				BEF9BB8F26413CDB00CCC03C /* SignUpViewController.swift in Sources */,
 				BE84F0B2264A68FD00CAB439 /* ItemViewController.swift in Sources */,
 				BEC8D9B926479296008D0342 /* HomeViewController.swift in Sources */,
+				C8CB5F372650FD8F001BBD6C /* FeaturedHorizontialCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,16 +8,15 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnViewAllFeatured: UIButton!
     @IBOutlet weak var btnViewAllNew: UIButton!
     
     override func viewDidLoad() {
       super.viewDidLoad()
-     
-   
-          
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -35,6 +34,22 @@ class HomeViewController: UIViewController {
                 let vc = segue.destination as? FeaturedProductsViewController
                 vc?.screenTitle = "All Products"
     }
-}
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return products.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FHCVCell", for: indexPath) as! FeaturedHorizontialCollectionViewCell
+
+        cell.featuredProductHorizontialImageView.image = products[indexPath.row].image
+        cell.featuredProductHorizontalTitle.text = products[indexPath.row].title
+        cell.featuredProductHorizontialPrice.text = products[indexPath.row].price
+
+
+
+        return cell
+    }
 
 }
