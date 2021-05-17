@@ -8,9 +8,24 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(products.count)
+        return products.count
+    }
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FHCVCell", for: indexPath) as! FHCVCell
+        cell.fhcvImageView.image = products[indexPath.row].image
+        cell.fhcvTitle.text = products[indexPath.row].title
+        cell.fhcvPrice.text = products[indexPath.row].price
+        return cell
+    }
+    
+    
+    
+    
+
     @IBOutlet weak var btnViewAllFeatured: UIButton!
     @IBOutlet weak var btnViewAllNew: UIButton!
     
@@ -36,20 +51,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
         
     }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return products.count
-    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FHCVCell", for: indexPath) as! FeaturedHorizontialCollectionViewCell
-
-        cell.featuredProductHorizontialImageView.image = products[indexPath.row].image
-        cell.featuredProductHorizontalTitle.text = products[indexPath.row].title
-        cell.featuredProductHorizontialPrice.text = products[indexPath.row].price
-
-
-
-        return cell
-    }
 
 }
