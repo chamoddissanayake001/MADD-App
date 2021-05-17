@@ -29,10 +29,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 vc?.screenTitle = "All Featured Products"
             case btnViewAllNew:
                 let vc = segue.destination as? FeaturedProductsViewController
-                vc?.screenTitle = "All Products"
+                vc?.screenTitle = "All New Products"
             default:
                 let vc = segue.destination as? FeaturedProductsViewController
-                vc?.screenTitle = "All Products"
+                vc?.screenTitle = "All New Products"
     }
         
     }

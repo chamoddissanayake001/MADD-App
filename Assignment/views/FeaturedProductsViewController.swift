@@ -35,8 +35,18 @@ class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate
        productCollectionView.dataSource = self
        productCollectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
+        var url = URL(string: "https://2b4fb57cd43a.ngrok.io/products/featured")
+        
+        if(self.title == "All Featured Products"){
+            url = URL(string: "https://2b4fb57cd43a.ngrok.io/products/featured")
+        }else if (self.title == "All New Products"){
+            url = URL(string: "https://2b4fb57cd43a.ngrok.io/products/new")
+        }
 
-        let url = URL(string: "https://488f6031c726.ngrok.io/products/featured")
+    
+
+        
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error == nil{
                 do{
