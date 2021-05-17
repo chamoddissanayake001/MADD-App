@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3D533137265269BF00B8411B /* FHCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D533136265269BF00B8411B /* FHCVCell.swift */; };
+		3D53313D265284ED00B8411B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53313C265284ED00B8411B /* Order.swift */; };
+		3D533143265288F200B8411B /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D533142265288F200B8411B /* OrdersViewController.swift */; };
+		3D533145265291CB00B8411B /* OrdersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D533144265291CB00B8411B /* OrdersCollectionViewCell.swift */; };
 		BE84F0B2264A68FD00CAB439 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE84F0B1264A68FD00CAB439 /* ItemViewController.swift */; };
 		BEB4FEFD2642DE180008EF30 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB4FEFC2642DE180008EF30 /* ResetPasswordViewController.swift */; };
 		BEB4FEFF2642E73B0008EF30 /* FeaturedProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB4FEFE2642E73B0008EF30 /* FeaturedProductsViewController.swift */; };
@@ -33,6 +36,9 @@
 
 /* Begin PBXFileReference section */
 		3D533136265269BF00B8411B /* FHCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHCVCell.swift; sourceTree = "<group>"; };
+		3D53313C265284ED00B8411B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		3D533142265288F200B8411B /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		3D533144265291CB00B8411B /* OrdersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersCollectionViewCell.swift; sourceTree = "<group>"; };
 		BE84F0B1264A68FD00CAB439 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		BEB4FEFC2642DE180008EF30 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		BEB4FEFE2642E73B0008EF30 /* FeaturedProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductsViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +106,8 @@
 				BEB7A99C264F0B3E008C93B2 /* ProductCollectionViewCell.swift */,
 				C8CB5F2E264FE35B001BBD6C /* NewProductCollectionViewCell.swift */,
 				3D533136265269BF00B8411B /* FHCVCell.swift */,
+				3D53313C265284ED00B8411B /* Order.swift */,
+				3D533144265291CB00B8411B /* OrdersCollectionViewCell.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 				C8CB5F30264FE3F8001BBD6C /* NewProductsViewController.swift */,
 				BEC8D9B826479296008D0342 /* HomeViewController.swift */,
 				BE84F0B1264A68FD00CAB439 /* ItemViewController.swift */,
+				3D533142265288F200B8411B /* OrdersViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -196,6 +205,8 @@
 			files = (
 				BEF9BB7C264136D300CCC03C /* ViewController.swift in Sources */,
 				BEB4FEFF2642E73B0008EF30 /* FeaturedProductsViewController.swift in Sources */,
+				3D53313D265284ED00B8411B /* Order.swift in Sources */,
+				3D533143265288F200B8411B /* OrdersViewController.swift in Sources */,
 				BEB7A99D264F0B3E008C93B2 /* ProductCollectionViewCell.swift in Sources */,
 				BEF9BB78264136D300CCC03C /* AppDelegate.swift in Sources */,
 				C8CB5F31264FE3F8001BBD6C /* NewProductsViewController.swift in Sources */,
@@ -209,6 +220,7 @@
 				BEF9BB9126413D7200CCC03C /* AboutUsViewController.swift in Sources */,
 				BEB4FEFD2642DE180008EF30 /* ResetPasswordViewController.swift in Sources */,
 				C8CB5F2F264FE35B001BBD6C /* NewProductCollectionViewCell.swift in Sources */,
+				3D533145265291CB00B8411B /* OrdersCollectionViewCell.swift in Sources */,
 				BEF9BB9326413D9400CCC03C /* TermsAndConditionsViewController.swift in Sources */,
 				BEF9BB8F26413CDB00CCC03C /* SignUpViewController.swift in Sources */,
 				BE84F0B2264A68FD00CAB439 /* ItemViewController.swift in Sources */,
