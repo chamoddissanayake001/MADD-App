@@ -36,12 +36,12 @@ class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate
        productCollectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
-        var url = URL(string: "https://e61f59b8cb6c.ngrok.io/products/featured")
+        var url = URL(string: "https://ac9d004b9511.ngrok.io/products/featured")
         
         if(self.title == "All Featured Products"){
-            url = URL(string: "https://e61f59b8cb6c.ngrok.io/products/featured")
+            url = URL(string: "https://ac9d004b9511.ngrok.io/products/featured")
         }else if (self.title == "All New Products"){
-            url = URL(string: "https://e61f59b8cb6c.ngrok.io/products/new")
+            url = URL(string: "https://ac9d004b9511.ngrok.io/products/new")
         }
 
     
