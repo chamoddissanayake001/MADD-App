@@ -23,7 +23,7 @@ class OrdersViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
 
-            let url = URL(string: "https://ac9d004b9511.ngrok.io/orders")
+            let url = URL(string: "http://13.235.27.22:5000/orders")
             
             URLSession.shared.dataTask(with: url!) { (data, response, error) in
                 if error == nil{
