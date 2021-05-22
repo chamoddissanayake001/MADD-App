@@ -1607,6 +1607,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ERg-bi-pWh"/>
                     </view>
+                    <navigationItem key="navigationItem" id="BJv-eu-QqQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2N-Qf-qpW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

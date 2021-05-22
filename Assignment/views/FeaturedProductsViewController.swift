@@ -44,8 +44,7 @@ class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate
             url = URL(string: "http://13.235.27.22:5000/products/new")
         }
 
-    
-
+       
         
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error == nil{
@@ -61,15 +60,9 @@ class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate
         }.resume()
     }
     
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return products.count
-//    }
-//    func collectionView(_ collectionView: UICollectionView,  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
-//        cell.setup(with: products[indexPath.row])
-//
-//        return cell
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("hello");
+    }
 }
 
 extension FeaturedProductsViewController:UICollectionViewDataSource{
