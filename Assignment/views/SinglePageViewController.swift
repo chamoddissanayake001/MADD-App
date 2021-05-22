@@ -52,6 +52,7 @@ class SinglePageViewController: UIViewController {
         self.productDescription.text = productDescription1
         self.productImage.downloadFrom5(from:productImage1)
         
+        
     }
     
 
