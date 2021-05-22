@@ -26,7 +26,7 @@ extension UIImageView {
     }
     func downloadFrom4(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }
-        downloadFrom3(from: url, contentMode: mode)
+        downloadFrom4(from: url, contentMode: mode)
     }
 }
 class NHCVCell: UICollectionViewCell {

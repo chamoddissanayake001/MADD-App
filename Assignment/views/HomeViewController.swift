@@ -35,7 +35,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cv1.delegate = self
         cv1.dataSource = self
         
-        cv1.delegate = self
+        cv2.delegate = self
         cv2.dataSource = self
         
         let url = URL(string: "http://13.235.27.22:5000/products/featured")
@@ -63,6 +63,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     print("Parse Error")
                 }
                 DispatchQueue.main.async {
+                    
                     self.cv2.reloadData()
                 }
             }
@@ -73,7 +74,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return FirstItemArr.count
+        if collectionView == self.cv1{
+            return FirstItemArr.count;
+        }else{
+            return SecondItemArr.count;
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -83,6 +88,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             cell.setup(with: FirstItemArr[indexPath.row])
                 return cell
         }else{
+            print("hhhh")
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NHCVCell", for: indexPath) as! NHCVCell
                        cell.setup(with: SecondItemArr[indexPath.row])
                            return cell
