@@ -1059,7 +1059,7 @@
                                                 <constraint firstItem="b7R-cd-8ok" firstAttribute="top" secondItem="OgG-1j-tyh" secondAttribute="top" id="zj5-6o-af7"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="160" height="260"/>
                                         <connections>
                                             <outlet property="addToCartBtn" destination="Wpd-Ue-D42" id="daz-4t-zVF"/>
@@ -1185,22 +1185,24 @@
                                                                     <rect key="frame" x="15" y="230.66666666666666" width="130" height="29.999999999999972"/>
                                                                     <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                                    <state key="normal" title="Add To Cart">
+                                                                    <state key="normal" title="    Add To Cart   ">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="usk-ig-qvV" secondAttribute="trailing" id="4Nf-QI-6Gy"/>
-                                                                <constraint firstItem="4Ro-K9-Hw0" firstAttribute="top" secondItem="usk-ig-qvV" secondAttribute="bottom" constant="10" id="9np-lJ-Swq"/>
+                                                                <constraint firstItem="4Ro-K9-Hw0" firstAttribute="top" secondItem="usk-ig-qvV" secondAttribute="bottom" constant="10" id="6FL-6h-Jde"/>
                                                                 <constraint firstItem="usk-ig-qvV" firstAttribute="leading" secondItem="pB7-rH-60S" secondAttribute="leading" id="CUF-io-L9M"/>
                                                                 <constraint firstItem="qAb-IW-CZn" firstAttribute="top" secondItem="VLf-gS-sTC" secondAttribute="bottom" constant="10" id="Ddx-GC-HLg"/>
                                                                 <constraint firstItem="usk-ig-qvV" firstAttribute="top" secondItem="qAb-IW-CZn" secondAttribute="bottom" constant="10" id="JW9-CW-T6F"/>
-                                                                <constraint firstItem="4Ro-K9-Hw0" firstAttribute="leading" secondItem="pB7-rH-60S" secondAttribute="leading" constant="15" id="PGO-Tv-1Bv"/>
-                                                                <constraint firstAttribute="trailing" secondItem="4Ro-K9-Hw0" secondAttribute="trailing" constant="15" id="QkK-bG-V1r"/>
+                                                                <constraint firstAttribute="trailing" secondItem="4Ro-K9-Hw0" secondAttribute="trailing" constant="15" id="RCI-Ch-nA4"/>
                                                                 <constraint firstItem="usk-ig-qvV" firstAttribute="leading" secondItem="pB7-rH-60S" secondAttribute="leading" id="SId-94-OqR"/>
                                                                 <constraint firstItem="VLf-gS-sTC" firstAttribute="top" secondItem="pB7-rH-60S" secondAttribute="top" id="WPa-df-YVQ"/>
                                                                 <constraint firstItem="qAb-IW-CZn" firstAttribute="leading" secondItem="pB7-rH-60S" secondAttribute="leading" id="WYt-pp-mwK"/>
@@ -1209,6 +1211,7 @@
                                                                 <constraint firstAttribute="trailing" secondItem="usk-ig-qvV" secondAttribute="trailing" id="onr-hu-WZo"/>
                                                                 <constraint firstItem="usk-ig-qvV" firstAttribute="top" secondItem="qAb-IW-CZn" secondAttribute="bottom" constant="10" id="tPL-Qd-dyZ"/>
                                                                 <constraint firstItem="VLf-gS-sTC" firstAttribute="leading" secondItem="pB7-rH-60S" secondAttribute="leading" id="xwD-dX-7Rc"/>
+                                                                <constraint firstItem="4Ro-K9-Hw0" firstAttribute="leading" secondItem="pB7-rH-60S" secondAttribute="leading" constant="15" id="xzQ-0T-PWc"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="160" height="260"/>
@@ -1282,7 +1285,6 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="b0H-kP-nOe" secondAttribute="trailing" constant="10" id="4E4-l0-aEl"/>
                                                                 <constraint firstItem="Brp-Vs-u80" firstAttribute="leading" secondItem="qdC-Lw-qGN" secondAttribute="leading" id="4x7-ie-VSV"/>
-                                                                <constraint firstItem="t5l-eH-eVp" firstAttribute="top" secondItem="Brp-Vs-u80" secondAttribute="bottom" constant="4" id="B9Q-Up-FqR"/>
                                                                 <constraint firstItem="b0H-kP-nOe" firstAttribute="leading" secondItem="qdC-Lw-qGN" secondAttribute="leading" constant="10" id="InD-Pc-oPc"/>
                                                                 <constraint firstItem="b0H-kP-nOe" firstAttribute="top" secondItem="t5l-eH-eVp" secondAttribute="bottom" constant="8" id="Rwr-fr-WhD"/>
                                                                 <constraint firstItem="Brp-Vs-u80" firstAttribute="top" secondItem="qdC-Lw-qGN" secondAttribute="top" id="Vyj-1i-ubp"/>
@@ -2031,8 +2033,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gDg-wf-FbE"/>
-        <segue reference="X43-cT-0KT"/>
-        <segue reference="gPU-ce-hvB"/>
-        <segue reference="qWU-dH-ejb"/>
+        <segue reference="KJn-Eh-eeb"/>
+        <segue reference="Jw1-8e-Tlw"/>
+        <segue reference="wtP-TM-ET9"/>
     </inferredMetricsTieBreakers>
 </document>
