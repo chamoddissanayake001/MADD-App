@@ -68,7 +68,7 @@ class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate
                     detailVC.productTitle1 = self.products[row].title
                     detailVC.productPrice1 = self.products[row].price
                     detailVC.productImage1 = self.products[row].image
-                    detailVC.productDescription1 = "aaa"
+                    detailVC.productDescription1 = "This is the new version"
                 }
             }
         }
