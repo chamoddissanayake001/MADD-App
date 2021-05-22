@@ -43,5 +43,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         productImageView.downloadFrom(from:product.image)
         
     }
+    
+
 }
 

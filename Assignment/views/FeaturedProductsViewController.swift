@@ -62,6 +62,14 @@ class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("hello");
+        print(indexPath)
+        
+        print(self.products[indexPath.row].title)
+         print(self.products[indexPath.row].price)
+         print(self.products[indexPath.row].image)
+
+        
+        
     }
 }
 
