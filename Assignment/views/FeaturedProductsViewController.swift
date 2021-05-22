@@ -60,18 +60,27 @@ class FeaturedProductsViewController: UIViewController, UICollectionViewDelegate
         }.resume()
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("hello");
-        print(indexPath)
-        
-        print(self.products[indexPath.row].title)
-         print(self.products[indexPath.row].price)
-         print(self.products[indexPath.row].image)
-
-        
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSingleView" {
+            if let detailVC = segue.destination as? SinglePageViewController {
+                if let paths = collectionView?.indexPathsForSelectedItems {
+                    let row = paths[0].row
+                    detailVC.productTitle1 = self.products[row].title
+                    detailVC.productPrice1 = self.products[row].price
+                    detailVC.productImage1 = self.products[row].image
+                    detailVC.productDescription1 = "aaa"
+                }
+            }
+        }
     }
 }
+
+
+
+
+
+
+
 
 extension FeaturedProductsViewController:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

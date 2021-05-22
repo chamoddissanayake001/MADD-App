@@ -31,6 +31,7 @@
 		BEF9BB99264141BB00CCC03C /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9BB98264141BB00CCC03C /* ForgotPasswordViewController.swift */; };
 		C8A2B2192659240A00EC42B3 /* NHCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A2B2182659240A00EC42B3 /* NHCVCell.swift */; };
 		C8A2B21F2659312E00EC42B3 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A2B21E2659312E00EC42B3 /* CartViewController.swift */; };
+		C8A2B2232659488500EC42B3 /* SinglePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A2B2222659488500EC42B3 /* SinglePageViewController.swift */; };
 		C8CB5F2F264FE35B001BBD6C /* NewProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB5F2E264FE35B001BBD6C /* NewProductCollectionViewCell.swift */; };
 		C8CB5F31264FE3F8001BBD6C /* NewProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB5F30264FE3F8001BBD6C /* NewProductsViewController.swift */; };
 		C8CB5F33264FE4F3001BBD6C /* NewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB5F32264FE4F3001BBD6C /* NewProduct.swift */; };
@@ -63,6 +64,7 @@
 		BEF9BB98264141BB00CCC03C /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		C8A2B2182659240A00EC42B3 /* NHCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHCVCell.swift; sourceTree = "<group>"; };
 		C8A2B21E2659312E00EC42B3 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		C8A2B2222659488500EC42B3 /* SinglePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePageViewController.swift; sourceTree = "<group>"; };
 		C8CB5F2E264FE35B001BBD6C /* NewProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8CB5F30264FE3F8001BBD6C /* NewProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductsViewController.swift; sourceTree = "<group>"; };
 		C8CB5F32264FE4F3001BBD6C /* NewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProduct.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				BE84F0B1264A68FD00CAB439 /* ItemViewController.swift */,
 				3D533142265288F200B8411B /* OrdersViewController.swift */,
 				C8A2B21E2659312E00EC42B3 /* CartViewController.swift */,
+				C8A2B2222659488500EC42B3 /* SinglePageViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				C8CB5F33264FE4F3001BBD6C /* NewProduct.swift in Sources */,
 				BEF9BB97264140D100CCC03C /* LoginViewController.swift in Sources */,
 				BEF9BB99264141BB00CCC03C /* ForgotPasswordViewController.swift in Sources */,
+				C8A2B2232659488500EC42B3 /* SinglePageViewController.swift in Sources */,
 				BEF9BB9126413D7200CCC03C /* AboutUsViewController.swift in Sources */,
 				BEB4FEFD2642DE180008EF30 /* ResetPasswordViewController.swift in Sources */,
 				C8CB5F2F264FE35B001BBD6C /* NewProductCollectionViewCell.swift in Sources */,
