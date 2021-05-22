@@ -29,6 +29,7 @@
 		BEF9BB9526413DBF00CCC03C /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9BB9426413DBF00CCC03C /* PrivacyViewController.swift */; };
 		BEF9BB97264140D100CCC03C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9BB96264140D100CCC03C /* LoginViewController.swift */; };
 		BEF9BB99264141BB00CCC03C /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9BB98264141BB00CCC03C /* ForgotPasswordViewController.swift */; };
+		C8A2B2192659240A00EC42B3 /* NHCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A2B2182659240A00EC42B3 /* NHCVCell.swift */; };
 		C8CB5F2F264FE35B001BBD6C /* NewProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB5F2E264FE35B001BBD6C /* NewProductCollectionViewCell.swift */; };
 		C8CB5F31264FE3F8001BBD6C /* NewProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB5F30264FE3F8001BBD6C /* NewProductsViewController.swift */; };
 		C8CB5F33264FE4F3001BBD6C /* NewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CB5F32264FE4F3001BBD6C /* NewProduct.swift */; };
@@ -59,6 +60,7 @@
 		BEF9BB9426413DBF00CCC03C /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		BEF9BB96264140D100CCC03C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BEF9BB98264141BB00CCC03C /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		C8A2B2182659240A00EC42B3 /* NHCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHCVCell.swift; sourceTree = "<group>"; };
 		C8CB5F2E264FE35B001BBD6C /* NewProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		C8CB5F30264FE3F8001BBD6C /* NewProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductsViewController.swift; sourceTree = "<group>"; };
 		C8CB5F32264FE4F3001BBD6C /* NewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProduct.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				3D533136265269BF00B8411B /* FHCVCell.swift */,
 				3D53313C265284ED00B8411B /* Order.swift */,
 				3D533144265291CB00B8411B /* OrdersCollectionViewCell.swift */,
+				C8A2B2182659240A00EC42B3 /* NHCVCell.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8A2B2192659240A00EC42B3 /* NHCVCell.swift in Sources */,
 				BEF9BB7C264136D300CCC03C /* ViewController.swift in Sources */,
 				BEB4FEFF2642E73B0008EF30 /* FeaturedProductsViewController.swift in Sources */,
 				3D53313D265284ED00B8411B /* Order.swift in Sources */,

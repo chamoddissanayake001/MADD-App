@@ -1,15 +1,16 @@
 //
-//  FHCVCell.swift
+//  NHCVCell.swift
 //  Assignment
 //
-//  Created by user173744 on 5/17/21.
+//  Created by Lasitha weerasinghe on 5/22/21.
 //  Copyright © 2021 it18120844. All rights reserved.
 //
 
 import UIKit
 
+
 extension UIImageView {
-    func downloadFrom3(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+    func downloadFrom4(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
@@ -23,25 +24,23 @@ extension UIImageView {
             }
         }.resume()
     }
-    func downloadFrom3(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+    func downloadFrom4(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }
         downloadFrom3(from: url, contentMode: mode)
     }
 }
-
-
-class FHCVCell: UICollectionViewCell {
-    @IBOutlet weak var fhcvImageView: UIImageView!
-    @IBOutlet weak var fhcvTitle: UILabel!
-    @IBOutlet weak var fhcvPrice: UILabel!
-    @IBOutlet weak var fhcvAddToCart: UIButton!
+class NHCVCell: UICollectionViewCell {
+ 
+    @IBOutlet weak var newProdImageView: UIImageView!
+    @IBOutlet weak var newProdTitle: UILabel!
+    @IBOutlet weak var newProdPrice: UILabel!
     
-       func setup(with firstItem: FirstItem){
-               
-                fhcvTitle.text = firstItem.title
-                fhcvPrice.text = firstItem.price
-                fhcvImageView.downloadFrom3(from:firstItem.image)
-               
-           }
+    
+    func setup(with secondItem: SecondItem){
+//        newProdImageView
+        newProdTitle.text = secondItem.title
+        newProdPrice.text = secondItem.price
+        newProdImageView.downloadFrom4(from:secondItem.image)
+    }
     
 }
